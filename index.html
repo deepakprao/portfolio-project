@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">John.dev</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">John Doe</span></h1>
+            <p class="subtitle">Full Stack Developer</p>
+            <p class="description">
+                I build web applications using HTML, CSS, JavaScript, and Node.js
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#projects" class="btn btn-secondary">View Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="avatar">👨‍💻</div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>
+                I'm a passionate developer who loves building things for the web.
+                I started my journey with HTML and CSS, then moved on to JavaScript
+                and Node.js. I enjoy solving problems and learning new technologies.
+            </p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number" id="projects-count">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="experience">0</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="skills-count">0</span>
+                    <span class="stat-label">Skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🌐</div>
+                <h3>HTML5</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🎨</div>
+                <h3>CSS3</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🟢</div>
+                <h3>Node.js</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="75"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">📝</div>
+                <h3>Todo App</h3>
+                <p>Task management app with localStorage</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">🌤️</div>
+                <h3>Weather App</h3>
+                <p>Real-time weather using API</p>
+                <div class="project-tags">
+                    <span>JS</span>
+                    <span>API</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">💬</div>
+                <h3>Chat App</h3>
+                <p>Real-time chat with Node.js</p>
+                <div class="project-tags">
+                    <span>Node</span>
+                    <span>Socket.io</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@email.com" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                    <span class="error-msg" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <span id="btnText">Send Message</span>
+                    <span id="btnLoading" style="display:none;">Sending...</span>
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display:none;">
+                <div class="success-icon">✅</div>
+                <h3>Message Sent!</h3>
+                <p>Thank you for reaching out. I'll get back to you soon.</p>
+                <button onclick="resetForm()" class="btn btn-secondary">Send Another</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2024 John Doe. Built with ❤️ using HTML, CSS, JS, and Node.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
